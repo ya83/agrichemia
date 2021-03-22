@@ -1,0 +1,602 @@
+@media (max-width: 1199px) {
+  .swiper-navigation {
+    &__wrapper {
+      display: none;
+    }
+  }
+
+  .slider-news__container.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 1175px) {
+  .navi-left {
+    margin: 0 auto;
+    padding-right: 80px;
+  }
+
+  .navi-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .navi-right {
+    margin: 0 auto;
+  }
+
+  .navi-right>.btn {
+    margin-left: 10px;
+  }
+
+  .btn__bordered {
+    padding: 3px 5px;
+  }
+
+  .section__header .text-block {
+    margin-top: 0;
+  }
+}
+
+@media all and (max-width: 1140px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navi-left,
+  .btn.btn__top-menu.btn__bordered,
+  .navi-right>a {
+    display: none;
+  }
+
+  .offer-content {
+    max-width: 810px;
+    padding: 0 40px;
+  }
+
+  .menu__btn {
+    display: block;
+  }
+
+  .navi-right {
+    margin-right: 30px;
+  }
+
+  .section__header {
+    background-image: url(./images/agrichemia-header-mobile.png);
+    background-size: 100%;
+    background-position: center 40%;
+  }
+
+  .home {
+    & .navi {
+      padding-top: 0;
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+
+  .filterDiv.show {
+    max-width: 50%;
+    width: 100%;
+
+    & img {
+      max-width: 220px;
+    }
+  }
+
+  .product-slider__image img {
+    max-width: 190px;
+  }
+
+  .footer {
+    &-logo {
+      padding-right: 50px;
+    }
+  }
+
+  &-info__products {
+    margin-right: 50px;
+  }
+}
+
+@media(max-width: 768px) {
+
+  #btnsWrapper {
+    margin-bottom: 50px;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $green;
+    height: 80px;
+    margin: 0;
+    & .btns{
+      color:white;
+      opacity:0.5;
+      &.active{
+        color:white;
+        opacity: 1;
+      }
+    }
+    
+
+  }
+
+  .not-home {
+    & .section__header.categories-header {
+      margin-top: 60px;
+      height: 400px;
+    }
+
+    &.page {
+      margin: 0 40px;
+      overflow: hidden;
+      padding: 100px 0 50px;
+    }
+
+    .page-box__text-reverse img {
+      min-width: 100%;
+    }
+  }
+
+  .section {
+    &__header {
+      background-image: url(./images/agrichemia-header-mobile.png);
+      background-size: 100%;
+      background-position: center 84%;
+      height: 100vh;
+
+      & .text-block {
+        padding-top: 190px;
+
+        & .heading {
+          font-size: 30px;
+
+          &__sub {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .page .page-box__text-reverse.page-box__right {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .page-box,
+  .page-box__reverse {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+
+    &__text {
+      margin-left: 0;
+    }
+  }
+
+  .page-box__reverse img,
+  .page-box__img {
+    min-width: 100%;
+  }
+
+  & .menu__btn {
+    left: 15px;
+  }
+
+  & .home {
+    & .navi-father {
+      margin-top: 0;
+      @include transition-all();
+
+      &.scrolled {
+        & .navi {
+          height: 50px;
+        }
+      }
+      }
+    } 
+
+  &.navi-father {
+    @include transition-all();
+
+    &.scrolled {
+      & .navi {
+        height: 60px;
+      }
+    }
+  }
+
+  & .navi {
+    height: 60px;
+    @include transition-all();
+
+    &-center {
+      >a {
+        >img {
+          margin-top: 4px;
+          width: 140px;
+        }
+      }
+    }
+
+    &-right {
+      & .lang__selector {
+        position: relative;
+        margin-right: -15px;
+
+        &_item {
+          &.current {
+            display: none;
+          }
+
+          &::before {
+            display: none;
+          }
+
+          >a {
+            border: 2px solid $white;
+            border-radius: 50px;
+            padding: 1px 6px;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .slider-news__item {
+    padding-left: 40px;
+  }
+
+  .slider-info {
+    &__text {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &__item {
+      min-height: 340px;
+    }
+  }
+
+  .distributors-slider__container {
+    min-height: 200px;
+  }
+
+  .footer {
+    position: relative;
+
+    &-inner {
+      display: block;
+    }
+
+    &-logo {
+      width: 100%;
+      padding-left: 0;
+
+      &__img {
+        margin: 0 auto;
+        padding-bottom: 30px;
+      }
+
+      &__text {
+        padding: 0 40px;
+      }
+
+      &__link {
+        text-align: center;
+      }
+
+      &__copytext {
+        position: absolute;
+        bottom: 20px;
+        left: 40px
+      }
+    }
+
+    &-info {
+      width: 100%;
+      margin-top: 30px;
+
+      &__products {
+        width: 50%;
+        padding-left: 40px;
+        margin-right: 50px;
+      }
+
+      &__company {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: 600px) and (max-width: 768px) {
+  .slider-news {
+    &__title {
+      margin-right: 80px;
+    }
+  }
+
+  .filterDiv.show img {
+    max-width: 200px;
+  }
+}
+
+@media(max-width: 480px) {
+  .filterDiv {
+    margin-bottom: 50px;
+
+    &.show {
+      min-width: 100%;
+
+      & img {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .filter-title {
+    font-size: 30px;
+  }
+
+  .slider-news {
+    &__item {
+      padding-left: 0;
+      display: block;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    &__text {
+      margin-left: 0;
+      padding: 0 20px;
+    }
+
+    &__date {
+      margin-top: 20px;
+    }
+
+    &__title {
+      margin-right: 0;
+    }
+  }
+
+  .heading.product__slider-heading,
+  .offer-title {
+    font-size: 22px;
+  }
+
+  .offer {
+
+    .heading.product__slider-heading,
+    .offer-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .product__slider-text {
+      margin: 50px 0;
+    }
+  }
+
+  .distributors-slider__container {
+    min-height: 120px;
+  }
+
+  .footer {
+    a {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &-info {
+      display: block;
+
+      &__products {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 30px;
+      }
+
+      &__company {
+        text-align: center;
+      }
+    }
+
+    &-logo__text {
+      text-align: center;
+    }
+
+  }
+
+}
+@media (min-width: 1306px) {
+  .section {
+    &__header {
+      &::before {
+        background-position: center calc(100% + 30px);
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1305px) {
+  .section {
+    &__header {
+      &::before {
+        background-position: center calc(100% + 15px);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home {
+    & .section {
+      &__header {
+        min-height: 800px;
+      }
+    }
+  }
+
+  .not-home {
+    & .section {
+      &__header {
+        min-height: 514px;
+      }
+    }
+  }
+
+  .product-slider {
+    &__slide {
+      position: relative;
+      transform: scale(1);
+      @include transition-all();
+      transition-duration: .8s;
+
+      & .product-slider__image {
+        animation: gravitation 15s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+
+        &::after {
+          position: absolute;
+          content: '';
+          background-image: url(./images/btn-more.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          opacity: 0;
+          transform: scale(.5);
+          filter: drop-shadow(20px 30px 10px rgba(0, 0, 0, 0.25));
+          height: 100%;
+          width: 100%;
+          @include transition-all();
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+
+        & .product-slider__image {
+          &::after {
+            opacity: 1;
+            transform: scale(1);
+          }
+
+          & img {
+            filter: drop-shadow(20px 30px 20px rgba(0, 0, 0, 0.30));
+          }
+        }
+      }
+    }
+
+    &__slide:nth-child(2n) {
+      margin-top: 50px;
+
+      & .product-slider__image {
+        animation-delay: .5s;
+      }
+    }
+
+    &__slide:nth-child(3n) {
+      & .product-slider__image {
+        animation-delay: 1s;
+      }
+    }
+
+    &__slide:nth-child(4n) {
+      & .product-slider__image {
+        animation-delay: 1.5s;
+      }
+    }
+
+    &__slide:nth-child(5n) {
+      & .product-slider__image {
+        animation-delay: 2s;
+      }
+    }
+
+    &__container {
+      overflow: visible;
+    }
+  }
+
+  .distributors-slider {
+    &__container {
+      overflow: visible;
+    }
+
+    &__slide {
+      transform: scale(1);
+      @include transition-all();
+      transition-duration: 1s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .product-slider,
+  .slider-news {
+    &__container {
+      position: relative;
+      overflow: visible;
+
+      & .swiper-navigation {
+        &__wrapper {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+
+  .all__link {
+    margin-bottom: 100px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .slider-news {
+    &__item {
+      & .news-mask-svg {
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.20));
+        transform: scale(1);
+        @include transition-all();
+        transition-duration: 1s;
+      }
+
+      & a {
+        @include transition-all();
+      }
+
+      &:hover {
+        & .news-mask-svg {
+          filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.20));
+          transform: scale(1.1);
+        }
+
+        & a {
+          color: $green;
+        }
+      }
+    }
+  }
+}
