@@ -126,6 +126,7 @@ h1.heading {
   top: 0;
   left: 0;
   right: 0;
+  background-color: #53a152;
   width: 100vw;
   z-index: 100;
   -webkit-transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
