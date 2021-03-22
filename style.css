@@ -1149,6 +1149,154 @@ h1.heading {
   min-width: 730px;
 }
 
+.filter-title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+
+#btnsWrapper {
+  max-width: 730px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#btnsWrapper .btns {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+#btnsWrapper .btns.active {
+  color: #53a152;
+}
+
+.filterDiv {
+  float: left;
+  max-width: 240px;
+  text-align: center;
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 100px;
+  -webkit-animation: fadeOut 2s;
+          animation: fadeOut 2s;
+}
+
+.filterDiv:hover .img-wrapper::after {
+  opacity: 1;
+}
+
+.filterDiv.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  margin-top: 30px;
+  cursor: pointer;
+  max-width: 33.33%;
+  width: 100%;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+.filterDiv.show img {
+  max-width: 240px;
+  -webkit-filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.25));
+}
+
+.filterDiv.show img:hover {
+  -webkit-animation: gravitation 10s cubic-bezier(0, 0, 0.35, 0) infinite;
+          animation: gravitation 10s cubic-bezier(0, 0, 0.35, 0) infinite;
+}
+
+.filterDiv .img-wrapper {
+  position: relative;
+  display: block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.filterDiv .img-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  background-image: url(./images/eye.svg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.filterDiv .img-wrapper:hover {
+  -webkit-animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+          animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+}
+
+.filterDiv__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-start;
+      -ms-flex-pack: space-start;
+          justify-content: space-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filterDiv .filter-container {
+  margin-top: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+.filterDiv .filter-text {
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.filterDiv .filter-name {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.filterDiv .filter-info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
 @media (min-width: 1306px) {
   .section__header::before {
     background-position: center calc(100% + 30px);
@@ -1442,6 +1590,13 @@ h1.heading {
 }
 
 @media (max-width: 1024px) {
+  .filterDiv.show {
+    max-width: 50%;
+    width: 100%;
+  }
+  .filterDiv.show img {
+    max-width: 220px;
+  }
   .product-slider__image img {
     max-width: 190px;
   }
@@ -1454,13 +1609,25 @@ h1.heading {
 }
 
 @media (max-width: 768px) {
-  .not-home
-.page {
+  #btnsWrapper {
+    margin-bottom: 50px;
+    min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .not-home .section__header.categories-header {
+    margin-top: 60px;
+    height: 400px;
+  }
+  .not-home.page {
     margin: 0 40px;
     overflow: hidden;
     padding: 100px 0 50px;
   }
-  .page-box__text-reverse img {
+  .not-home .page-box__text-reverse img {
     min-width: 100%;
   }
   .section__header {
@@ -1598,9 +1765,35 @@ h1.heading {
   .slider-news__title {
     margin-right: 80px;
   }
+  .filterDiv.show img {
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 480px) {
+  #btnsWrapper {
+    display: block;
+  }
+  #btnsWrapper .btns {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  #btnsWrapper .btns + .btns {
+    margin-top: 20px;
+  }
+  .filterDiv {
+    margin-bottom: 50px;
+  }
+  .filterDiv.show {
+    min-width: 100%;
+  }
+  .filterDiv.show img {
+    max-width: 200px;
+  }
+  .filter-title {
+    font-size: 30px;
+  }
   .slider-news__item {
     padding-left: 0;
     display: block;

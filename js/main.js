@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween : 5,
+        spaceBetween: 5,
         centeredSlides: true,
         autoplay: {
             delay: 3000,
@@ -133,8 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
             480: {
                 slidesPerView: 3,
             },
- 
+
         }
     });
-  
+
+    
+
 });
