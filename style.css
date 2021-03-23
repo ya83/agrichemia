@@ -12,6 +12,10 @@ ul {
   padding: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 li {
   list-style-type: none;
 }
@@ -156,7 +160,6 @@ h1.heading {
 
 .navi-mother {
   max-height: 60px;
-  position: absolute;
   bottom: 0;
 }
 
@@ -1676,7 +1679,7 @@ h1.heading {
     max-width: 200px;
   }
   .filter-title {
-    font-size: 30px;
+    font-size: 35px;
   }
   .slider-news__item {
     padding-left: 0;
