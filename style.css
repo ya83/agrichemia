@@ -998,30 +998,32 @@ h4 {
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 100px;
-  animation: fadeOut 2s;
   transform: scale(1);
 }
 .filterDiv.show {
   display: flex;
   flex-direction: column;
-  transition: all 0.5s;
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  transition-duration: 0.8s;
   margin-top: 30px;
   cursor: pointer;
   max-width: 33.33%;
   width: 100%;
-  animation: fadeIn 2s;
+}
+.filterDiv.show.fade-in {
+  animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.filterDiv.show a {
+  color: #1d0e02;
 }
 .filterDiv.show img {
   max-width: 240px;
   filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.25));
 }
-.filterDiv.show img:hover {
-  animation: gravitation 10s cubic-bezier(0, 0, 0.35, 0) infinite;
-}
 .filterDiv .img-wrapper {
   position: relative;
   display: block;
-  transition: all 0.5s;
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
 }
 .filterDiv .img-wrapper::after {
   content: "";
@@ -1034,18 +1036,20 @@ h4 {
   background-repeat: no-repeat;
   background-size: auto;
   opacity: 0;
-  transform: scale(0);
-  transition: all 0.3s;
+  transform: scale(0.5);
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
 }
-.filterDiv:hover {
-  transform: scale(1.2);
-}
-.filterDiv:hover .img-wrapper::after {
-  opacity: 1;
-  transform: scale(1);
-}
-.filterDiv:hover .img-wrapper img {
-  animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+@media (min-width: 1200px) {
+  .filterDiv:hover {
+    transform: scale(1.05);
+  }
+  .filterDiv:hover .img-wrapper::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .filterDiv:hover .img-wrapper img {
+    animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+  }
 }
 .filterDiv__inner {
   display: flex;
@@ -1058,7 +1062,6 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  animation: fadeIn 2s;
 }
 .filterDiv .filter-text {
   margin: 30px;
@@ -1096,11 +1099,13 @@ h4 {
   }
 }
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
+    transform: scale(0.9);
   }
-  100% {
+  to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes fadeOut {

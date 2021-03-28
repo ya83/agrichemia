@@ -1199,28 +1199,29 @@ h4{
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 100px;
-  animation: fadeOut 2s;
   transform: scale(1);
 
   &.show {
     display: flex;
     flex-direction: column;
-    transition: all .5s;
+    @include transition-all;
+    transition-duration: 0.8s;
     margin-top: 30px;
     cursor: pointer;
     max-width: 33.33%;
     width: 100%;
-    animation: fadeIn 2s;
+    
+  &.fade-in {
+    animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1);
+  }
 
-
+    & a {
+      color: $black
+    }
 
     & img {
       max-width: 240px;
       filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.25));
-
-      &:hover {
-        animation: gravitation 10s cubic-bezier(0, 0, 0.35, 0) infinite;
-      }
     }
 
   }
@@ -1228,7 +1229,7 @@ h4{
   & .img-wrapper {
     position: relative;
     display: block;
-    transition: all .5s;
+    transition: all .3s cubic-bezier(0.33, 1, 0.68, 1);
 
     &::after {
       content: '';
@@ -1241,20 +1242,21 @@ h4{
       background-repeat: no-repeat;
       background-size: auto;
       opacity: 0;
-      transform: scale(0);
-      transition: all .3s;
+      transform: scale(.5);
+      transition: all .3s cubic-bezier(0.33, 1, 0.68, 1);
     }
   }
-
-  &:hover {
-    transform: scale(1.2);
-    & .img-wrapper {
-      &::after {
-        opacity: 1;
-        transform: scale(1);
-      }
-      & img {
-        animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+  @media (min-width: 1200px) {
+    &:hover {
+      transform: scale(1.05);
+      & .img-wrapper {
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+        & img {
+          animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+        }
       }
     }
   }
@@ -1272,7 +1274,7 @@ h4{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      animation: fadeIn 2s;
+      // animation: fadeIn 2s;
     }
 
     &-text {
@@ -1320,13 +1322,14 @@ h4{
 }
 
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
-
+    transform: scale(.9);
   }
 
-  100% {
+  to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
