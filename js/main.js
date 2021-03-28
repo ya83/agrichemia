@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     document.addEventListener('scroll', function () {
-        document.querySelector('.navi-father').classList.toggle('scrolled', window.pageYOffset > 70);
-        document.querySelector('.navi-mother').classList.toggle('scrolled', window.pageYOffset > 500);
+        document.querySelector('.navi-father').classList.toggle('scrolled', window.pageYOffset > 0);
     });
 
     new Swiper('.product-slider__container', {

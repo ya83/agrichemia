@@ -1,0 +1,8 @@
+@mixin transition-all {
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+$white: #fff;
+$black: #1d0e02;
+$green: #53a152;
+$violet: #7b0a52;

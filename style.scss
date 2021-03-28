@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-$white: #fff;
-$black: #1d0e02;
-$green: #53a152;
-$violet: #7b0a52;
 
-@mixin transition-all {
-  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
-}
+@import '_options';
 
 html,
 body {
@@ -20,10 +14,12 @@ body {
 ul {
   padding: 0;
 }
-h1{
-  margin:0;
+
+h1 {
+  margin: 0;
 }
-li {
+
+li { 
   list-style-type: none;
 }
 
@@ -32,7 +28,7 @@ a {
 }
 
 .bg-white {
-  background-color: $white;
+  background-color: $white; 
 }
 
 .bg-violet {
@@ -53,6 +49,7 @@ a {
 .container-pages {
   max-width: 730px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 h1.heading {
@@ -61,6 +58,28 @@ h1.heading {
   font-size: 40px;
   line-height: 49px;
   letter-spacing: -0.04em;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+p.heading__text{
+      max-width: 540px;
+      margin: 0 auto;
+      margin-bottom: 100px; 
+}
+h4{
+  font-weight: 700;
+  font-size: 28px;
+  min-width: 540px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.style-text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .section {
@@ -124,6 +143,7 @@ h1.heading {
   }
 
   & .navi-father {
+    position: fixed;
     background-color: transparent;
     margin-top: 36px;
 
@@ -146,38 +166,35 @@ h1.heading {
   }
 
   & .navi-father {
+    position: fixed;
     background-color: $green;
   }
 }
-.not-home{
+
+.not-home {
   position: relative;
 }
 
 .navi-father,
 .navi-mother {
-  position: fixed;
   left: 0;
   right: 0;
   width: 100vw;
   z-index: 100;
   @include transition-all();
-.navi-father {
-  top:0;
+
+  .navi-father {
+    position: fixed;
+    top: 0;
+
     &.scrolled {
       & .navi {
         height: 66px;
       }
     }
-    }
-}
-.navi-mother {
-  max-height: 60px;
-  bottom: 0;
-
-  & .scrolled {
-    height: 60px;
   }
 }
+
 
 
 
@@ -467,7 +484,6 @@ h1.heading {
 
     &-list {
       padding-left: 40px;
-      z-index: 4;
       width: 100%;
       height: 100vh;
       background-color: $green;
@@ -475,6 +491,10 @@ h1.heading {
       top: 49px;
       transform: translate(-200%);
       transition: .5s;
+
+      > li {
+        margin: 30px 0;
+      }
 
       &.active {
         transform: translate(0);
@@ -677,15 +697,14 @@ h1.heading {
   margin-bottom: -10px;
 }
 
-//start offer page
+//start offer information
 .offer {
   margin-bottom: 100px;
+  background-color:#F1F1F1;
 }
 
-.page {
-  padding: 200px 0 30px;
-  max-width: 730px;
-  margin: 0 auto;
+.information {
+  padding: 100px 0;
 
   &-box {
     display: flex;
@@ -714,7 +733,7 @@ h1.heading {
     }
   }
 
-  .page-box__text-reverse.page-box__right {
+  .information-box__text-reverse.information-box__right {
     margin-right: 0;
     margin-left: 30px;
   }
@@ -748,7 +767,7 @@ h1.heading {
     }
   }
 
-  .page-box__img:hover .inner-link {
+  .information-box__img:hover .inner-link {
     min-height: 100%;
     cursor: pointer;
     opacity: 1;
@@ -760,13 +779,18 @@ h1.heading {
     }
   }
 
-  .page-box__textreverse {
+  .information-box__img.information-box__image.big-img__inner {
+    height: auto;
+    width: auto;
+  }
+
+  .information-box__textreverse {
     margin-left: 0;
     margin-right: 30px;
     margin-top: 30px;
   }
 
-  .page-box__reverse {
+  .information-box__reverse {
     margin-top: 30px;
 
     & img {
@@ -801,25 +825,18 @@ h1.heading {
     }
   }
 }
-
-//categories page{
-.gallery {
-  display: flex;
-  justify-content: start;
-
-  li {
-    width: 33.33%;
+//about page
+.text,
+.about{
+  padding: 100px 0 70px;
+}
+.about {
+  background-color: #f1f1f1;
+  &-head{
+    margin-top: 100px;
   }
 }
 
-//end offer page
-//start text
-.text {
-  padding: 100px 0;
-}
-
-//end text
-//end product slider
 //start slider-info
 .swiper-navigation {
   &__wrapper {
@@ -1062,6 +1079,7 @@ h1.heading {
     margin-bottom: 20px;
   }
 
+
   & a {
     color: $white;
     text-transform: uppercase;
@@ -1110,10 +1128,14 @@ h1.heading {
     padding-top: 5px;
     display: flex;
 
-  &__links {
-      margin-bottom: 50px;
-  }    
-  &:not(:first-child) {
+    &__icons {
+      display: flex;
+
+      &__links {
+        margin-bottom: 50px;
+      }
+
+      &:not(:first-child) {
         & a {
           margin-top: 10px;
         }
@@ -1124,17 +1146,17 @@ h1.heading {
       margin-right: 100px;
     }
 
-    &__icons {
-      display: flex;
 
-      a+a {
-        margin-left: 35px;
-      }
+
+
+    a+a {
+      margin-left: 35px;
     }
   }
+}
 
 
-.page.offer-content {
+.information.offer-content {
   text-align: center;
   min-width: 730px;
 }
@@ -1160,8 +1182,7 @@ h1.heading {
     cursor: pointer;
     font-size: 14px;
     line-height: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 500;
     animation: fadeIn 2s;
 
     &.active {
@@ -1179,12 +1200,7 @@ h1.heading {
   line-height: 20px;
   margin-bottom: 100px;
   animation: fadeOut 2s;
-
-  &:hover {
-    .img-wrapper::after {
-      opacity: 1;
-    }
-  }
+  transform: scale(1);
 
   &.show {
     display: flex;
@@ -1207,16 +1223,13 @@ h1.heading {
       }
     }
 
-
   }
-.big-img__wrapper {
-      height: auto;
-      width: auto;
-}
+
   & .img-wrapper {
     position: relative;
     display: block;
     transition: all .5s;
+
     &::after {
       content: '';
       position: absolute;
@@ -1228,11 +1241,21 @@ h1.heading {
       background-repeat: no-repeat;
       background-size: auto;
       opacity: 0;
-      transition: all .5s;
+      transform: scale(0);
+      transition: all .3s;
     }
+  }
 
-    &:hover {
-      animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+  &:hover {
+    transform: scale(1.2);
+    & .img-wrapper {
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      & img {
+        animation: gravitation 15s cubic-bezier(0, 0, 0.35, 1) infinite;
+      }
     }
   }
 
@@ -1263,14 +1286,13 @@ h1.heading {
       margin-bottom: 10px;
     }
 
-
-
     &-info {
       text-align: center;
       font-size: 16px;
       line-height: 20px;
-      margin-bottom: 24px;
       font-weight: 500;
+      max-width: 290px;
+      margin: 20px auto 24px;
     }
   }
 }
@@ -1302,10 +1324,12 @@ h1.heading {
     opacity: 0;
 
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -1315,5 +1339,5 @@ h1.heading {
     opacity: 0;
   }
 }
-@import '_media';
 
+@import '_media';
