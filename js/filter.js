@@ -55,4 +55,3 @@ buttons.forEach(function (btn) {
     });
   });
 });
-//end
