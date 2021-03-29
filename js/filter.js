@@ -43,8 +43,8 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-let buttons = document.querySelectorAll('.btns');
-let fDiv= document.querySelectorAll('.filterDiv');
+const buttons = document.querySelectorAll('.btns'),
+  fDiv = document.querySelectorAll('.filterDiv');
 buttons.forEach(function (btn) {
   btn.addEventListener('click', function () {
     fDiv.forEach((show) => {
