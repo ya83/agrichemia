@@ -130,6 +130,14 @@
       }
     }
   }
+  .footer{
+    &-info__icons{
+      img{
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1024px) {
@@ -329,7 +337,8 @@
       &__copytext {
         position: absolute;
         bottom: 20px;
-        left: 40px
+        width: 100vw;
+        text-align: center;
       }
     }
 
@@ -479,11 +488,6 @@
     &-logo__text {
       text-align: center;
     }
-
-    &-logo__copytext {
-      text-align: center;
-    }
-
   }
 
   #btnsWrapper {
