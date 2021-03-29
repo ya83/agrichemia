@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     let menuButton = document.querySelector('.menu__btn');
     let menuList = document.querySelector('.menu__btn-list');
+    let containerHeader = document.querySelector('.container-header')
     menuButton.addEventListener('click', function (e) {
         e.preventDefault();
         menuList.classList.toggle('active');
-        menuButton.classList.toggle('actived')
+        menuButton.classList.toggle('actived');
+        containerHeader.classList.toggle('active');
     });
 
 
@@ -136,5 +138,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     });
-    
+
 });

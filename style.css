@@ -1480,9 +1480,14 @@ h4 {
 }
 
 @media all and (max-width: 1140px) {
-  .container {
+  .container-header {
     width: 100%;
     margin: 0 auto;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .container-header.active {
+    background-color: #53a152;
   }
   .navi-left,
   .btn.btn__top-menu.btn__bordered,
@@ -1553,7 +1558,7 @@ h4 {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-left: 0;
-    height: calc(100vh - 108px);
+    height: calc(100vh);
   }
   .menu__btn-list > li {
     margin: 5px 0 5px 0;

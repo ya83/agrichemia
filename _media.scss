@@ -45,9 +45,13 @@
 }
 
 @media all and (max-width: 1140px) {
-  .container {
+  .container-header {
     width: 100%;
     margin: 0 auto;
+    transition: all .5s;
+    &.active{
+      background-color: #53a152;
+    }
   }
 
   .navi-left,
@@ -120,7 +124,7 @@
         align-items: center;
         flex-direction: column;
         padding-left: 0;
-        height: calc(100vh - 108px);
+        height: calc(100vh);
         > li {
           margin: 5px 0 5px 0;
           > a {
