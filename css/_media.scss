@@ -48,7 +48,7 @@
   .container-header {
     width: 100%;
     margin: 0 auto;
-    transition: all .5s;
+    transition: all .6s;
     &.active{
       background-color: #53a152;
     }
@@ -124,7 +124,9 @@
         align-items: center;
         flex-direction: column;
         padding-left: 0;
-        height: calc(100vh);
+        height: 100vh;
+        position: absolute;
+        top:0;
         > li {
           margin: 5px 0 5px 0;
           > a {
@@ -178,9 +180,15 @@
 }
 
 @media all and (max-width: 768px) { 
+  h4{
+    min-width: 100%;
+    font-size: 24px;
+  }
   .not-home {
-    & .section__header.categories-header {
+    & .section__header{
       margin-top: 60px;
+    }
+    & .section__header.categories-header {
       height: 400px;
     }
 
@@ -237,6 +245,7 @@
   .information-box__reverse img,
   .information-box__img {
     min-width: 100%;
+    height: auto;
   }
 
   .home {
@@ -340,7 +349,7 @@
 
       &__copytext {
         position: absolute;
-        bottom: 20px;
+        bottom: 35px;
         width: 100vw;
         text-align: center;
       }
