@@ -80,7 +80,16 @@ h4{
   margin-top: 0;
   margin-bottom: 30px;
 }
-
+h6{
+  font-size: 18px;
+  line-height: 24px;
+  color:$green;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  text-align: left;
+}
 .style-text {
   font-size: 18px;
   line-height: 28px;
@@ -1136,7 +1145,7 @@ h4{
       font-size: 18px;
     }
     div+div{
-      margin-top:10px;
+      margin-top:12px;
     }
   }
   &-title{
@@ -1228,10 +1237,6 @@ h4{
     &__products {
       margin-right: 100px;
     }
-
-
-
-
     a+a {
       margin-left: 35px;
     }
@@ -1243,7 +1248,6 @@ h4{
   text-align: center;
   min-width: 730px;
 }
-
 //start categories page
 .filter-title {
   text-align: center;
@@ -1251,7 +1255,6 @@ h4{
   line-height: 48px;
   text-align: center;
 }
-
 #btnsWrapper {
   max-width: 730px;
   margin: 0 auto;
@@ -1357,7 +1360,6 @@ h4{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      // animation: fadeIn 2s;
     }
 
     &-text {
@@ -1380,6 +1382,91 @@ h4{
       margin: 20px auto 24px;
     }
   }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(83, 161, 82, 0.86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  &.show{
+    .articles-item__btn{
+      border:2px solid rgba(83, 161, 82, 0.86);
+      background-color:#ffffff;
+      color:rgba(83, 161, 82, 0.86);
+      &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+  &-heading__wrapper{
+    padding:0 25px;
+    display: flex;
+    justify-content: space-between;
+    color:#FFFFFF;
+    margin-bottom: 20px;
+  }
+&__title{
+    font-size: 28px;
+    font-weight: 700;
+  }
+&__close{
+  height: 22px;
+  width: 22px;
+  position: relative;
+  cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    transform: scale(1.15);
+  }
+  &::after,
+  &::before{
+    content:'';
+    border: 2px solid #FFFFFF;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+  }
+  &::after{
+    transform:rotate(45deg);
+  }
+  &::before{
+    transform:rotate(-45deg);
+  } 
+}
+  &-content{
+    background-color: #FFFFFF;
+    width: 540px;
+    height: 408px;
+    border-radius: 28px;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    form{
+      text-align: center;
+      padding-right: 10px;
+    }
+  }
+  &__input{
+    min-width: 100%;
+    height: 48px;
+    background-color:#F1F1F1;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+}
+.show{
+  display: flex;
 }
 
 @keyframes gravitation {

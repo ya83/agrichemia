@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body class="not-home">
   <div class="navi-father">
     <div class="container">
@@ -91,36 +90,37 @@
             </h5>
             <div class="productone-struct">
               <div class="productone-components">
-              <p class="productone-title">
-                Свойство 1:
-              </p>
-              <span>100мг/л</span>
+                <p class="productone-title">
+                  Свойство 1:
+                </p>
+                <span>100мг/л</span>
               </div>
               <div class="productone-components">
-              <p class="productone-title">
-                Свойство 2:
-              </p>
-              <span>100мг/л</span>
+                <p class="productone-title">
+                  Свойство 2:
+                </p>
+                <span>100мг/л</span>
               </div>
               <div class="productone-components">
-              <p class="productone-title">
-                Свойство 3:
-              </p>
-              <span>100мг/л</span>
+                <p class="productone-title">
+                  Свойство 3:
+                </p>
+                <span>100мг/л</span>
               </div>
               <div class="productone-components">
-              <p class="productone-title">
-                Свойство 4:
-              </p>
-              <span>100мг/л</span>
+                <p class="productone-title">
+                  Свойство 4:
+                </p>
+                <span>100мг/л</span>
               </div>
 
             </div>
-            <a class="articles-item__btn item-btn" href="#">ЗАМОВИТИ</a>
+            <a class="articles-item__btn item-btn" href="#" data-modal>ЗАМОВИТИ</a>
           </div>
         </div>
         <p class="style-text">
-          Зараз він виготовляє 15 тонн продукції на годину, або 36 000 тонн на рік. Нашою особливою гордістю є швейцарська
+          Зараз він виготовляє 15 тонн продукції на годину, або 36 000 тонн на рік. Нашою особливою гордістю є
+          швейцарська
           виробнича лінія Bühler і своя дослідна лабораторія.
         </p>
         <p class="style-text">
@@ -129,10 +129,12 @@
           Відповідно до стратегії просування, влітку 2018 року був запущений власний завод з виробництва добрив.
         </p>
         <p class="style-text">
-          Зараз він виготовляє 15 тонн продукції на годину, або 36 000 тонн на рік. Нашою особливою гордістю є швейцарська
+          Зараз він виготовляє 15 тонн продукції на годину, або 36 000 тонн на рік. Нашою особливою гордістю є
+          швейцарська
           виробнича лінія Bühler і своя дослідна лабораторія.
         </p>
       </div>
+
     </section>
   </main>
   <footer class="footer">
@@ -179,9 +181,27 @@
       </div>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-heading__wrapper">
+        <div class="modal__title">Замовлення Vitafer Micro</div>
+        <div class="modal__close" data-close></div>
+      </div>
+      <div class="modal-content">
+        <form action="#">
+          <h6>Як до Вас звертатися? (Iм’я)</h6>
+          <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+          <h6>Ваша поштова адреса (e-mail)</h6>
+          <input required placeholder="Ваш e-mail" name="name" type="text" class="modal__input">
+          <h6>Ваш контактний номер</h6>
+          <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+          <button type="submit" class="articles-item__btn">Заказать</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/modal.js"></script>
   <script src="./js/main.js"></script>
-
-  <body>
-
+<body>
 </html>
