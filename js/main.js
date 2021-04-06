@@ -138,5 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     });
-
+    const im = new Inputmask('+38 (099) 999-99-99', {
+        'placeholder': '+38 (0XX) XXX-XX-XX',
+        clearMaskOnLostFocus: false
+    });
+    im.mask('input[type=tel]');
+    
 });

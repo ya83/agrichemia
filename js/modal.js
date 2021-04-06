@@ -1,5 +1,7 @@
   const modalTrigger = document.querySelectorAll('[data-modal]'),
-        modal = document.querySelector('.modal');
+        modal = document.querySelector('.modal'),
+        windowSucces = document.querySelector('.window-inner'),
+        form = document.getElementsByTagName('form');
 
   modalTrigger.forEach(btn => {
     btn.addEventListener('click', openModal);
@@ -28,3 +30,10 @@
       closeModal();
     }
   });
+ 
+   const changeModal = () => {
+      windowSucces.classList.add('show');
+      windowSucces.classList.remove('hide'); 
+ }
+
+  

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body class="not-home">
   <div class="navi-father">
     <div class="container">
@@ -182,26 +183,50 @@
     </div>
   </footer>
   <div class="modal">
-    <div class="modal-dialog">
+    <div class="modal__inner">
       <div class="modal-heading__wrapper">
         <div class="modal__title">Замовлення Vitafer Micro</div>
         <div class="modal__close" data-close></div>
       </div>
       <div class="modal-content">
-        <form action="#">
-          <h6>Як до Вас звертатися? (Iм’я)</h6>
-          <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
-          <h6>Ваша поштова адреса (e-mail)</h6>
-          <input required placeholder="Ваш e-mail" name="name" type="text" class="modal__input">
-          <h6>Ваш контактний номер</h6>
-          <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
-          <button type="submit" class="articles-item__btn">Заказать</button>
-        </form>
+        <div class="modal-content__inner">
+          <div class="modal-img" alt="picture" style="background-image: url(./images/modal-img.jpg);"></div>
+          <form action="#" onSubmit="{changeModal()}">
+            <h6>Як до Вас звертатися? (Iм’я)</h6>
+            <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+            <h6>Ваша поштова адреса (e-mail)</h6>
+            <input required placeholder="Ваш e-mail" name="email" value="" type="email"
+              class="modal__input custom-email">
+            <h6>Ваш контактний номер</h6>
+            <input required placeholder="Ваш номер телефона" name="phone" type="tel" class="modal__input">
+            <div class="checkbox">
+              <input class="custom-checkbox" type="checkbox" id="checkbox-item" name="checkbox-item" value="green">
+              <label class="label-checkbox" for="checkbox-item"><span>Відправляючи форму, я даю згоду на обробку персональних
+                  даних у відповідності з <a href="#">Політикою конфіденційності.</a></span></label>
+            </div>
+            <button type="submit" class="articles-item__btn">НАДIСЛАТИ</button>
+          </form>
+        </div>
       </div>
     </div>
+    <div class="window-inner">
+      <div class="window-succes">
+        <div class="window-succes__wrapper">
+          <img src="images/ok.svg" alt="picture">
+          <h6>Дякуємо за ваше замовлення!</h6>
+          <span class="ok-text">Ми з Вами зв'яжемося найближчим часом!</span>
+        </div>
+      </div>
+    </div>
+
   </div>
+
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/modal.js"></script>
+  <script src="./js/inputmask.min.js"></script>
   <script src="./js/main.js"></script>
-<body>
+
+
+</body>
+
 </html>
